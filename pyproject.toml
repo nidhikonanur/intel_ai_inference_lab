@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intel-ai-inference-lab"
+version = "0.1.0"
+description = "A lightweight AI inference benchmarking toolkit for ONNX Runtime and OpenVINO."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Nidhi Konanur" }]
+dependencies = [
+  "numpy>=1.26",
+  "pillow>=10.0",
+  "onnxruntime>=1.17",
+  "openvino>=2024.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+export = ["torch>=2.2", "torchvision>=0.17"]
+
+[tool.setuptools.packages.find]
+include = ["inference_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

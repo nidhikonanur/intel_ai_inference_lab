@@ -1,0 +1,5 @@
+numpy>=1.26
+pillow>=10.0
+onnxruntime>=1.17
+openvino>=2024.0
+pytest>=8.0
